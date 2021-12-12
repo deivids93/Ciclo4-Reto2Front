@@ -1,0 +1,70 @@
+body {
+  background-image: url("/images/fondo.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header {
+  margin: 0px;
+  height: 110px;
+  background-color: rgb(129, 20, 20);
+  color: white;
+}
+header .logo {
+  float: left;
+}
+header h1 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 50px;
+  padding-top: 15px;
+}
+header img {
+  width: 100%;
+  border-radius: 200px;
+  line-height: 20px;
+  padding-left: 100px;
+  padding-right: 10px;
+}
+
+main {
+  /* float: left;
+    width: calc(50% - 40px);*/
+
+  min-height: 420px;
+  color: rgb(218, 217, 163);
+  padding-left: 20px;
+  padding-right: 20px;
+
+  line-height: 50px;
+}
+
+footer {
+  color: rgb(129, 20, 20);
+  text-align: center;
+  height: 100px;
+  line-height: 20px;
+}
+#login {
+  margin: 100px;
+  width: 80%;
+  border-radius: 200px;
+  line-height: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+}
+
+#menu-login {
+  background-color: rgb(129, 20, 20);
+  border-radius: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-top: 15px;
+}

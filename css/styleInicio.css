@@ -1,0 +1,80 @@
+body {
+  background-image: url("/img/fondo.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cccccc;
+
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.navegacion {
+  width: 100%;
+
+  text-align: center;
+}
+.navegacion ul {
+  list-style: none;
+}
+.menu > li {
+  display: inline-block;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 20px 25px;
+  color: rgb(175, 42, 42);
+  font-family: "Pacifico", cursive;
+  text-decoration: none;
+}
+.menu > li > a:hover {
+  color: rgb(217, 228, 63);
+  transition: all 0.3s;
+}
+
+header {
+  margin: 0px;
+  height: 110px;
+  background-color: rgb(129, 20, 20);
+  color: white;
+}
+header .logo {
+  float: left;
+}
+header h1 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 50px;
+  padding-top: 15px;
+}
+
+header img {
+  width: 80%;
+  border-radius: 200px;
+  line-height: 20px;
+  padding-left: 100px;
+  padding-right: 10px;
+}
+footer {
+  color: rgb(19, 18, 18);
+  text-align: center;
+  height: 40px;
+  line-height: 20px;
+}
+
+a {
+  color: bisque;
+}
+#form img {
+  width: 100%;
+  height: 100%;
+}
+#form {
+  background-image: url("../imag/principal.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}

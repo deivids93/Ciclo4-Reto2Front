@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/styleInicio.css" />
+
+    <link rel="stylesheet" href="css/styleUsuarios.css" />
+    <script type="text/javascript" src="js/codigUsuario.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Creacion de Usuario</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        window.onload = cargartabla();
+    </script>
+
+    <div class="container">
+        <header class="row">
+            <div class="col-4 logo">
+                <img src="img/Logo.PNG" alt="" />
+            </div>
+            <div class="col-8 titulo">
+                <h1>Creacion de Cuenta Usuario</h1>
+            </div>
+        </header>
+
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="menu.html">Inicio</a></li>
+                <li><a href="usuario.html">Usuarios </a></li>
+                <li><a href="gadgets.html">Productos</a></li>
+
+
+            </ul>
+        </nav>
+
+
+
+        <main class="row ">
+
+
+            <section class=" row ">
+
+                <h2>Registro de Usuarios </h2>
+
+
+                <div class=" mb-2 col-lg-1">
+                    <label for="txtId" class="form-label">Id </label>
+                    <input type="number" id="txtId" class="form-control" placeholder="Id">
+                </div>
+                <div class="mb-3 col-lg-2">
+                    <label for="txtNumIdentificacion" class="form-label">Identificacion </label>
+                    <input type="text" id="txtNumIdentificacion" class="form-control" placeholder="Identificacion">
+                </div>
+                <div class="mb-3 col-lg-5">
+                    <label for="txtNombre" class="form-label">Nombre </label>
+                    <input type="text" maxlength="80" id="txtNombre" class="form-control"
+                        placeholder="Nombre del Usuario">
+                </div>
+                <div class="mb-3 col-lg-4">
+                    <label for="txtDirrecion" class="form-label">Direccion </label>
+                    <input type="text" id="txtDirrecion" class="form-control" placeholder="Dirrecion del Usuario">
+
+                </div>
+                <div class="mb-3 col-lg-3 ">
+                    <label for="txtCelular" class="form-label">Celular </label>
+                    <input type="number" id="txtCelular" class="form-control" placeholder="Celular del Usuario">
+                </div>
+                <div class="mb-3 col-lg-4 ">
+                    <label for="txtZona" class="form-label">Zona</label>
+                    <input type="text" class="form-control" id="txtZona" placeholder="Zona del Usuario">
+                </div>
+                <div class="mb-3 col-lg-5 ">
+                    <label for="selectperfil" class="form-label">Perfil</label>
+                    <select name="" id="selectperfil" class="form-control">
+                        <option value=""></option>
+                        <option value="COORD">Coordinador de Zona</option>
+                        <option value="ASE">Asesor Comercial</option>
+                        <option value="ADM">Administrador</option>
+
+                    </select>
+
+                </div>
+                <div class="mb-3  col-lg-6 ">
+                    <label for="txtEmail" class="form-label">Email </label>
+                    <input type="email" maxlength="50" id="txtEmail" class="form-control"
+                        placeholder="Correo del Usuario">
+
+                </div>
+                <div class="mb-3 col-lg-3 ">
+                    <label for="txtClave" class="form-label">Clave</label>
+                    <input type="password" maxlength="50" id="txtClave" class="form-control" placeholder="*****">
+
+                </div>
+                <div class="mb-3 col-lg-3">
+                    <label for="txtConfirmarClave" class="form-label">Confirmar Cave</label>
+                    <input type="password" maxlength="50" id="txtConfirmarClave" class="form-control"
+                        placeholder="*****">
+
+                </div>
+
+
+                <div class="mb-3 col-lg-12 button ">
+                    <button type="submit" id="btnguardar" class="btn btn-secondary btn-lg"
+                        onclick="validacionRegistro()">Crear</button>
+                    <button type="submit" id="btnactualizar" class="btn btn-secondary btn-lg"
+                        onclick="validacionActualizar()">Actualizar</button>
+                    <button type="submit" id="btnelimianr" class="btn btn-secondary btn-lg"
+                        onclick="Eliminar()">Borrar</button>
+                </div>
+
+
+            </section>
+
+            <div>
+                <br><br><br>
+            </div>
+
+            <section class="row">
+                <div class="col-12">
+                    <h2>Consulta y Edicion de Usuarios </h2>
+                    <div id="cargartabla" class="table-responsive">
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+
+
+
+        <div class="position-fixed top-0 end-0">
+            <div id="myToast" class="toast" role="alert">
+                <div class="toast-header">
+                    <h4 id="titulomensaje"></h4>
+                </div>
+                <div class="toast-body">
+                    <p id="cuerpomensaje"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <footer>
+                Mission Tic 20222<br />
+                Ciclo4<br />
+
+            </footer>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

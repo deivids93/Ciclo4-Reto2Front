@@ -1,0 +1,46 @@
+main {
+  /* float: left;
+    width: calc(50% - 40px);*/
+
+  min-height: 520px;
+  color: rgb(218, 217, 163);
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 15px;
+}
+footer {
+  color: rgb(19, 18, 18);
+  text-align: center;
+  height: 40px;
+  line-height: 20px;
+}
+.formulario {
+  background-color: rgb(129, 20, 20);
+  text-align: justify;
+}
+.formulario h2 {
+  text-align: center;
+}
+.formulario h2 {
+  text-align: center;
+}
+.formulario button {
+  text-align: left;
+}
+section {
+  background-color: rgb(129, 20, 20);
+  border-radius: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-top: 15px;
+}
+.table {
+  color: bisque;
+}
+#btnactualizar {
+  display: none;
+}
+#btnelimianr {
+  display: none;
+}
